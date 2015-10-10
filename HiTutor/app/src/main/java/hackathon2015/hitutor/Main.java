@@ -23,6 +23,7 @@ public class Main extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Auxiliar.chargeTemas(this);
         if(!isLoggedIn()) {
             Intent myIntent = new Intent(this, WelcomeActivity.class);
             startActivityForResult(myIntent, Request.session_nedded);
@@ -54,7 +55,7 @@ public class Main extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         switch (requestCode) {
             case Request.session_nedded:
-                Auxiliar.chargeTemas(this);
+
                 break;
             case Request.block_back:
                 Log.e("Main.onActivityResult", "you shall not pass!");

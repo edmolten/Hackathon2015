@@ -34,7 +34,7 @@
                 android:id="@+id/Ofre_editText"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:textAlignment="viewEnd" />
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -80,7 +80,7 @@
                     android:layout_width="133dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/Ofre_spinner4"
-                    android:textAlignment="viewEnd" />
+                     />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -144,7 +144,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="17dp"
-                    android:id="@+id/RelativeLayout1"></RelativeLayout>
+                    android:id="@+id/RelativeLayout1">
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"

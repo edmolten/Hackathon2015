@@ -10,11 +10,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/TEMITA" >
         <activity
             android:name=".Main"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/TEMITA.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +24,7 @@
         <activity
             android:name=".Buscar"
             android:label="@string/title_activity_buscar"
-            android:parentActivityName=".Main"
-            android:theme="@style/Theme.Holo" >
+            android:parentActivityName=".Main" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
@@ -43,11 +42,10 @@
         <activity
             android:name=".WelcomeActivity"
             android:label="Iniciar sesión"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/TEMITA.NoActionBar" >
         </activity>
 
-        <activity android:name=".Ofrecer"
-            android:theme="@style/Theme.Holo">
+        <activity android:name=".Ofrecer">
         </activity>
 
         <activity android:name=".MiPerfil" >
@@ -57,7 +55,7 @@
             android:name=".Detalle_Clase"
             android:label="@string/title_activity_clase__detail"
             android:parentActivityName=".Main"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/TEMITA.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
