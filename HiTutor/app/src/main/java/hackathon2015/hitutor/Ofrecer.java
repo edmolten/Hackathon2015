@@ -1,7 +1,7 @@
 package hackathon2015.hitutor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -72,7 +72,7 @@ public class Ofrecer extends AppCompatActivity {
     public String Val_Titulo;
     public String Val_Drop1;
     public String Val_Drop2;
-    public String Val_Precio;
+    public int Val_Precio;
     public boolean Val_ADomicilio;
     public boolean Val_Definido;
     public String Val_Descripcion;
@@ -114,7 +114,7 @@ public class Ofrecer extends AppCompatActivity {
                Val_Titulo = Titulo.getText().toString();
                Val_Drop1 = Drop1.getSelectedItem().toString();
                Val_Drop2 = Drop2.getSelectedItem().toString();
-               Val_Precio = Precio.getText().toString();
+               Val_Precio = Integer.valueOf(Precio.getText().toString());
                Val_ADomicilio = ADomicilio.isChecked();
                Val_Definido = Definido.isChecked();
                Val_Descripcion = Descripcion.getText().toString();
@@ -136,12 +136,12 @@ public class Ofrecer extends AppCompatActivity {
                    clase.put("isDesignadoPorTutor", Val_Definido);
                    clase.put("price", Val_Precio);
                    clase.put("user_id", Auxiliar.getLocalUserId(Ofrecer.this));
-                   clase.put("tema_ir", Auxiliar.getIdTemaByName(Val_Drop1));
+                   clase.put("tema_id", Auxiliar.getIdTemaByName(Val_Drop1));
                    clase.put("description", Val_Descripcion);
                    clase.put("disponibilidad", Val_Disponibilidad);
                    clase.put("nivel", Val_Drop2);
-                   clase.put("lat", 0); //TODO
-                   clase.put("long", 0); //TODO
+                   clase.put("lat", 0f); //TODO
+                   clase.put("long", 0f); //TODO
                    clase.put("activa", true);
                    clase.put("contacto", Val_Contacto);
                    holder.put("clase", clase);

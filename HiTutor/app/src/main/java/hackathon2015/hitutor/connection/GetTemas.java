@@ -4,11 +4,13 @@ package hackathon2015.hitutor.connection;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hackathon2015.hitutor.Tema;
 
@@ -36,5 +38,10 @@ public class GetTemas extends  GETJSONConnection {
         }
         Toast.makeText(activity,temas.toString(),Toast.LENGTH_LONG).show();
 
+    }
+
+    @Override
+    protected List<? extends NameValuePair> setParams(JSONObject json) {
+        return null;
     }
 }
