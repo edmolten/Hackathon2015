@@ -49,6 +49,18 @@
         android:hint="Repite contraseña"
         android:inputType="textPassword" />
 
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about"
+        android:layout_above="@+id/registrar"
+        android:layout_alignLeft="@+id/pass_confirm"
+        android:layout_alignStart="@+id/pass_confirm"
+        android:hint="Acercad e mi"
+        android:layout_alignRight="@+id/pass_confirm"
+        android:layout_alignEnd="@+id/pass_confirm"
+        android:layout_below="@+id/pass_confirm" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,5 +73,13 @@
         android:layout_marginStart="68dp"
         android:onClick="onRegistrarButtonClick"
         android:nestedScrollingEnabled="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_above="@+id/registrar"
+        android:layout_alignRight="@+id/registrar"
+        android:layout_alignEnd="@+id/registrar" />
 
 </RelativeLayout>

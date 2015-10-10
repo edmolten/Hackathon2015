@@ -72,4 +72,13 @@ public class Auxiliar {
         }
         return "";
     }
+
+    public static User getUserById(int id) {
+        for(User user: users){
+            if(user.id == id){
+                return user;
+            }
+        }
+        return null;
+    }
 }
