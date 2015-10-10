@@ -8,10 +8,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import hackathon2015.hitutor.connection.Login;
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -21,15 +21,11 @@ public class Main extends AppCompatActivity
         super.onCreate(savedInstanceState);
         if(!isLoggedIn()) {
             Intent myIntent = new Intent(this, WelcomeActivity.class);
-            startActivityForResult(myIntent, 37);
+            startActivityForResult(myIntent, Request.session_nedded);
         }
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -39,14 +35,24 @@ public class Main extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
     }
 
     private boolean isLoggedIn() {
         return false;
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        switch (requestCode) {
+            case Request.session_nedded:
+                break;
+            case Request.block_back:
+                Log.e("asd","entro");
+                finish();
+        }
+    }
 
     @Override
     public void onBackPressed() {

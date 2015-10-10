@@ -30,6 +30,6 @@ public class Login extends POSTJSONConnection {
             activity.setResult(Result.fail);
             Toast.makeText(activity, "No existe el usuario", Toast.LENGTH_LONG).show();
         }
-        activity.finishActivity(Request.login);
+        activity.finish();
     }
 }

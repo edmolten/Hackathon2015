@@ -34,7 +34,7 @@ public class SignupActivity extends AppCompatActivity {
         mUserPassword = passField.getText().toString();
         EditText passConfField = (EditText)findViewById(R.id.pass_confirm);
         mUserPasswordConfirmation = passConfField.getText().toString();
-        Signup signup = new Signup(this, Cons.SIGNIN_URL,"Registrando...");
+        Signup signup = new Signup(this, Cons.SIGNUP_URL,"Registrando...");
         JSONObject signupJson = createSigninJSON();
         signup.setJSON(signupJson);
         signup.execute();

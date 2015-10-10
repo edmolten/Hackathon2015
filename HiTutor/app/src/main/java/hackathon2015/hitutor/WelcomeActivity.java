@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import hackathon2015.hitutor.connection.Signup;
-
 import static hackathon2015.hitutor.Request.login;
 import static hackathon2015.hitutor.Request.signup;
 
@@ -33,11 +31,11 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onNuevoUsuarioClick(View v){
-        startActivityForResult(new Intent(this, SignupActivity.class), 1);
+        startActivityForResult(new Intent(this, SignupActivity.class), Request.signup);
     }
 
     public void onIngresarClick(View v){
-        startActivityForResult(new Intent(this,LoginActivity.class),2);
+        startActivityForResult(new Intent(this,LoginActivity.class),Request.login);
     }
 
     @Override
@@ -49,18 +47,30 @@ public class WelcomeActivity extends AppCompatActivity {
                 switch (resultCode) {
                     case Result.ok:
                         Snackbar.make(v,"Login correcto",Snackbar.LENGTH_LONG).show();
+                        finishActivity(Request.session_nedded);
+                        break;
                     case Result.fail:
                         Snackbar.make(v,"Error al ingresar. Intentelo nuevamente",Snackbar.LENGTH_LONG).show();
+                        break;
                 }
             case signup:
                 switch (resultCode){
                     case Result.ok:
                         Snackbar.make(v,"Usuario creado",Snackbar.LENGTH_LONG).show();
+                        break;
                     case Result.fail:
                         Snackbar.make(v,"No se pudo crear usuario",Snackbar.LENGTH_LONG).show();
+                        break;
                 }
         }
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishActivity(Request.block_back);
 
     }
 
