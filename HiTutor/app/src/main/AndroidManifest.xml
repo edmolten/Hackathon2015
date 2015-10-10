@@ -58,7 +58,6 @@
         <activity
             android:name=".Detalle_Clase"
             android:label="@string/title_activity_clase__detail"
-            android:parentActivityName=".Main"
             android:theme="@style/TEMITA.NoActionBar" >
         </activity>
     </application>
