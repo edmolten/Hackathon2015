@@ -2,39 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-3d1ccc2da6fa667070a6affa32a6f26efa3e5c7d.jar" />
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-fa4e674a18b18ba5eddea761665b1012b1fe610c.jar" />
     </item>
     <item
-        jar="C:\Users\pc-1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-bc0900bd94d06cc76ed3e9c89c013c442f5e3eb1.jar" />
-    </item>
-    <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-61be01cb0d2862e33c26d72924c3a5b45225bfb2.jar" />
-    </item>
-    <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-cb19a23c05720aedd368743017a8673746383a7b.jar" />
-    </item>
-    <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-c37871cb07c12fa9c2f31126884648c4c48a33b1.jar" />
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-20da17f077d76ef015d707566c864b0c4dc32446.jar" />
     </item>
 
 </items>
