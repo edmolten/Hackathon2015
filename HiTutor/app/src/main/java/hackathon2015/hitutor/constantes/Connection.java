@@ -7,4 +7,6 @@ public abstract class Connection {
     public static final String LOGIN_URL = SERVER_URL + "/api/session/create.json";
     public static final String POST_CLASE_URL = SERVER_URL + "/api/clase/new.json";
     public static final String GET_TEMAS_URL = SERVER_URL + "/api/tema/get.json";
+    public static final String GET_CLASES_URL = SERVER_URL + "/api/clase/get.json";
+    public static final String GET_USERS_URL = SERVER_URL + "/api/user/get.json";
 }

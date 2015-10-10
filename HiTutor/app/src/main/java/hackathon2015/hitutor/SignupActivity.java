@@ -8,8 +8,8 @@ import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import hackathon2015.hitutor.constantes.Connection;
 import hackathon2015.hitutor.connection.Signup;
+import hackathon2015.hitutor.constantes.Connection;
 
 
 public class SignupActivity extends AppCompatActivity {

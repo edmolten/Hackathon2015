@@ -98,8 +98,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:ems="10"
+                        android:text="1000"
                         android:id="@+id/Ofre_editText2"
-                        android:contextClickable="false"
                         android:digits="True" />
                 </LinearLayout>
 

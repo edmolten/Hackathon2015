@@ -4,19 +4,17 @@ import java.util.Comparator;
 
 import hackathon2015.hitutor.clases_result.Clase;
 
-
-
 public enum ClaseComparator implements Comparator<Clase> {
     PRICE_SORT {
         public int compare(Clase o1, Clase o2) {
-            return Integer.valueOf(o1.getPrice()).compareTo(o2.getPrice());
+            return Integer.valueOf(o1.price).compareTo(o2.price);
         }},
 
     RATE_SORT {
         public int compare(Clase o1, Clase o2) {
-            return Integer.valueOf((int) o1.getRate()).compareTo((int) o2.getRate());
-        }};
-
+            return Float.valueOf(o1.rate).compareTo(o2.rate);
+        }
+    };
     public static Comparator<Clase> decending(final Comparator<Clase> other) {
         return new Comparator<Clase>() {
             public int compare(Clase o1, Clase o2) {
