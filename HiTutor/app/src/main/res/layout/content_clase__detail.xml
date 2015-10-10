@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="106dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Título"
@@ -33,25 +33,25 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Materia"
-                android:id="@+id/clase_materia" />
+                android:id="@+id/detail_materia" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Precio/hora"
-                android:id="@+id/clase_precio"
+                android:id="@+id/detail_level"
                 android:digits="True" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="108dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Nivel"
                 android:id="@+id/clase_nivel" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Nombre"

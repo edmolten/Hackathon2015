@@ -37,18 +37,20 @@ public class Detalle_Clase extends AppCompatActivity {
 
 
         TextView text = (TextView) findViewById(R.id.detail_title);
-        RatingBar rate = (RatingBar) findViewById(R.id.buscar_ratingBar);
-        TextView  userName = (TextView) findViewById(R.id.buscar_nombre);
-        TextView mater = (TextView) findViewById(R.id.buscar_materia);
-        TextView price = (TextView) findViewById(R.id.buscar_preciohora);
+        TextView level = (TextView) findViewById(R.id.detail_level);
+        RatingBar rate = (RatingBar) findViewById(R.id.detail_rating);
+        TextView  userName = (TextView) findViewById(R.id.detail_nombre);
+        TextView mater = (TextView) findViewById(R.id.detail_materia);
+        TextView price = (TextView) findViewById(R.id.detail_price);
 
 
         text.setText(s_titulo);
+        level.setText(s_level);
         rate.setRating(s_rating);
         price.setText(s_precio);
         mater.setText(s_materia);
         userName.setText(s_user);
-
+        //FALTAN LOS DATOS DE CONTACTO
 
     }
 
