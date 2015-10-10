@@ -11,6 +11,12 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import hackathon2015.hitutor.connection.PostClase;
+import hackathon2015.hitutor.constantes.Connection;
 //import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class Ofrecer extends AppCompatActivity {
@@ -88,8 +94,8 @@ public class Ofrecer extends AppCompatActivity {
        //"atrapar" variables
        PublicarButton = (Button)findViewById(R.id.Ofre_button_Publicar);
        Titulo = (EditText)findViewById(R.id.Ofre_editText);
-       Drop1 = (Spinner)findViewById(R.id.Ofre_spinner3);
-       Drop2 = (Spinner)findViewById(R.id.Ofre_spinner4);
+       Drop1 = (Spinner)findViewById(R.id.Ofre_spinner3); //MATERIA
+       Drop2 = (Spinner)findViewById(R.id.Ofre_spinner4); //NIVEL
        Precio = (EditText)findViewById(R.id.Ofre_editText2);
        ADomicilio = (CheckBox)findViewById(R.id.Ofre_checkBox);
        Definido = (CheckBox)findViewById(R.id.Ofre_checkBox2);
@@ -111,6 +117,26 @@ public class Ofrecer extends AppCompatActivity {
                Val_Descripcion = Descripcion.getText().toString();
                Val_Disponibilidad = Disponibilidad.getText().toString();
                Val_Contacto = Contacto.getText().toString();
+               PostClase postClase = new PostClase(Ofrecer.this, Connection.POST_CLASE_URL, "Guardando clase...");
+               JSONObject claseJSON = createClaSEJSON();
+           }
+
+           private JSONObject createClaSEJSON() {
+               JSONObject holder = new JSONObject();
+               JSONObject clase = new JSONObject();
+               try {
+                   //:title, :isADomicilio, :isDesignadoPorTutor, :price, :user_id,:tema_id,:description,:disponibilidad,:nivel,:activa, :lat, :long,:contacto )
+                   clase.put("title", Val_Titulo);
+                   clase.put("isADomicilio", Val_ADomicilio);
+                   clase.put("isDesignadoPorTutor", Val_Definido);
+                   clase.put("price", Val_Precio);
+                   clase.put("user_id", Auxiliar.getLocalUserId(Ofrecer.this));
+                   holder.put("clase", clase);
+               } catch (JSONException e) {
+                   e.printStackTrace();
+                   return null;
+               }
+               return holder;
            }
        });
    }

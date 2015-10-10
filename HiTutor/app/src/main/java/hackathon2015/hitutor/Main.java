@@ -49,6 +49,7 @@ public class Main extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         switch (requestCode) {
             case Request.session_nedded:
+                Auxiliar.chargeTemas(this);
                 break;
             case Request.block_back:
                 Log.e("Main.onActivityResult", "you shall not pass!");
