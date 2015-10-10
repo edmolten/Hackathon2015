@@ -1,5 +1,6 @@
 package hackathon2015.hitutor;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,12 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -17,14 +24,20 @@ import java.util.ArrayList;
 
 import hackathon2015.hitutor.connection.PostClase;
 import hackathon2015.hitutor.constantes.Connection;
-//import android.widget.CompoundButton.OnCheckedChangeListener;
 
-public class Ofrecer extends AppCompatActivity {
+public class Ofrecer extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
+
+    private GoogleApiClient googleApiClient;
+    private LocationRequest locationRequest;
+    private boolean requestingLocationUpdates;
+    protected Location lastLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ofrecer2);
+        requestingLocationUpdates = false;
+        buildGoogleApiClient();
 
         //Ofre_spinner3 <-> Dropdown de Materias
         Spinner Ofre_spinner3 = (Spinner) findViewById(R.id.Ofre_spinner3);
@@ -56,6 +69,14 @@ public class Ofrecer extends AppCompatActivity {
         addListenerOnButton(); //inicia el listener del boton "Publicar"
     }
 
+    protected synchronized void buildGoogleApiClient() {
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        googleApiClient.connect();
+    }
     //declaracion de variables
     public Button PublicarButton;
     public EditText Titulo; //OfreeditText
@@ -140,8 +161,15 @@ public class Ofrecer extends AppCompatActivity {
                    clase.put("description", Val_Descripcion);
                    clase.put("disponibilidad", Val_Disponibilidad);
                    clase.put("nivel", Val_Drop2);
-                   clase.put("lat", 0f); //TODO
-                   clase.put("long", 0f); //TODO
+                   if(Definido.isChecked()){
+                       clase.put("lat", lastLocation.getLatitude()); //TODO
+                       clase.put("long", lastLocation.getLongitude()); //TODO
+                   }
+                   else{
+                       clase.put("lat", 0f); //TODO
+                       clase.put("long", 0f); //TODO
+                   }
+
                    clase.put("activa", true);
                    clase.put("contacto", Val_Contacto);
                    holder.put("clase", clase);
@@ -155,4 +183,55 @@ public class Ofrecer extends AppCompatActivity {
        });
    }
 
+
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        locationRequest = new LocationRequest();
+        locationRequest.setInterval(1000);
+        locationRequest.setFastestInterval(500);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this);
+        requestingLocationUpdates = true;
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
+        requestingLocationUpdates = false;
+        stopLocationUpdates();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        if (googleApiClient.isConnected() && !requestingLocationUpdates) {
+            requestingLocationUpdates = true;
+            startLocationUpdates();
+        }
+    }
+
+    protected void startLocationUpdates() {
+        LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this);
+    }
+
+    protected void stopLocationUpdates(){
+        LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        lastLocation = location;
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
 }
