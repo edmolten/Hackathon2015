@@ -20,30 +20,17 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="53dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.13">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="69dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.49">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="149dp"
+                android:layout_width="136dp"
                 android:layout_height="match_parent"
                 android:id="@+id/imageView3"
-                android:src="@mipmap/ic_login" />
+                android:src="@mipmap/ic_login"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="62dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.10"></LinearLayout>
     </LinearLayout>
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
@@ -65,12 +52,13 @@
 
             <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" android:text="Ingresar"
+                android:layout_marginTop="16dp"
+                android:text="Ingresar"
                 android:textStyle="bold"
                 android:onClick="onLoginButtonClick"
-                android:background="#00c6c6"
+                android:background ="#00c6c6"
                 android:textColor="#FFFFFF"
-                android:textSize="8pt" />
+                />
 
         </LinearLayout>
     </ScrollView>
