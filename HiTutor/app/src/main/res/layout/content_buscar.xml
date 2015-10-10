@@ -10,35 +10,54 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_buscar" tools:context="hackathon2015.hitutor.Buscar">
 
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buscar_spinner"
-        android:spinnerMode="dropdown"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buscar_spinner1"
-        android:layout_marginTop="32dp"
-        />
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buscar_spinner1"
+            android:layout_marginTop="32dp"
+            android:background="#D6BFB8" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buscar_spinner"
+            android:spinnerMode="dropdown"
+            android:background="#B8CFD6"
+            android:layout_weight="1.30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+
+            android:text="Buscar"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+
+            android:textColor="#FFFFFF"
+            android:id="@+id/button"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp"
+            android:onClick="onBuscarButtonClick"
+            android:background="#B8CFD6" />
+    </LinearLayout>
 
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buscar_sort"
-        android:layout_marginTop="32dp" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:id="@+id/button"
-        android:layout_marginRight="33dp"
-        android:layout_marginEnd="33dp"
-        android:layout_gravity="right"
-        android:onClick="onBuscarButtonClick"/>
+        android:layout_marginTop="32dp"
+        android:background="#C0D6B8" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listaclases"
