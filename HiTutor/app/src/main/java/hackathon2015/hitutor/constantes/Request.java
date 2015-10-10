@@ -1,4 +1,4 @@
-package hackathon2015.hitutor;
+package hackathon2015.hitutor.constantes;
 
 /**
  * Created by eddox on 10/10/2015.

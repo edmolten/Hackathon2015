@@ -8,7 +8,7 @@ import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import hackathon2015.hitutor.connection.Cons;
+import hackathon2015.hitutor.constantes.Connection;
 import hackathon2015.hitutor.connection.Signup;
 
 
@@ -34,7 +34,7 @@ public class SignupActivity extends AppCompatActivity {
         mUserPassword = passField.getText().toString();
         EditText passConfField = (EditText)findViewById(R.id.pass_confirm);
         mUserPasswordConfirmation = passConfField.getText().toString();
-        Signup signup = new Signup(this, Cons.SIGNUP_URL,"Registrando...");
+        Signup signup = new Signup(this, Connection.SIGNUP_URL,"Registrando...");
         JSONObject signupJson = createSigninJSON();
         signup.setJSON(signupJson);
         signup.execute();

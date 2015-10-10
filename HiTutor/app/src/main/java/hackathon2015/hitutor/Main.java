@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import hackathon2015.hitutor.constantes.Request;
+
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,7 +51,7 @@ public class Main extends AppCompatActivity
             case Request.session_nedded:
                 break;
             case Request.block_back:
-                Log.e("Main.onActivityResult","you shall not pass!");
+                Log.e("Main.onActivityResult", "you shall not pass!");
                 finish();
         }
     }

@@ -8,8 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import static hackathon2015.hitutor.Request.login;
-import static hackathon2015.hitutor.Request.signup;
+import hackathon2015.hitutor.constantes.Request;
+import hackathon2015.hitutor.constantes.Result;
+
+import static hackathon2015.hitutor.constantes.Request.login;
+import static hackathon2015.hitutor.constantes.Request.signup;
 
 public class WelcomeActivity extends AppCompatActivity {
 

@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
-import hackathon2015.hitutor.Result;
+import hackathon2015.hitutor.constantes.Result;
 
 public class Signup extends POSTJSONConnection {
     public Signup(AppCompatActivity activity, String urlString, String loadingMessage) {

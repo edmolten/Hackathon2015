@@ -8,7 +8,7 @@ import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import hackathon2015.hitutor.connection.Cons;
+import hackathon2015.hitutor.constantes.Connection;
 import hackathon2015.hitutor.connection.Login;
 
 public class LoginActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText passField = (EditText)findViewById(R.id.pass);
         mUserPassword = passField.getText().toString();
         JSONObject loginJSON = createLoginJSON();
-        Login login = new Login(this, Cons.LOGIN_URL ,"Ingresando...");
+        Login login = new Login(this, Connection.LOGIN_URL ,"Ingresando...");
         login.setJSON(loginJSON);
         login.execute();
     }

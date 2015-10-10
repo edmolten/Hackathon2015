@@ -1,4 +1,4 @@
-package hackathon2015.hitutor;
+package hackathon2015.hitutor.constantes;
 
 public class Result {
     public final static int ok = 1;
