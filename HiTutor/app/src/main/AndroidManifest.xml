@@ -49,15 +49,20 @@
             android:theme="@style/TEMITA.NoActionBar" >
         </activity>
 
-        <activity android:name=".Ofrecer">
+        <activity android:name=".Ofrecer"
+            android:label="Ofrecer clase">
         </activity>
 
-        <activity android:name=".MiPerfil" >
+        <activity android:name=".MiPerfil"
+            android:label="Mi perfil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hackathon2015.hitutor.Main" />
         </activity>
 
         <activity
             android:name=".Detalle_Clase"
-            android:label="@string/title_activity_clase__detail"
+            android:label="Clase"
             android:theme="@style/TEMITA.NoActionBar" >
         </activity>
     </application>

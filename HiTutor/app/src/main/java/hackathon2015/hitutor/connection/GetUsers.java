@@ -44,7 +44,8 @@ public class GetUsers extends GETJSONConnection {
                 int id = temaObject.getInt("id");
                 String name = temaObject.getString("name");
                 float valoracion =(float) temaObject.getDouble("valoracion");
-                User user = new User(id,name,valoracion);
+                String about = (String) temaObject.getString("about");
+                User user = new User(id,name,valoracion,about);
                 users.add(user);
             }
         } catch (JSONException e) {

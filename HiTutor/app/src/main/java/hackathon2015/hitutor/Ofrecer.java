@@ -162,8 +162,17 @@ public class Ofrecer extends AppCompatActivity implements GoogleApiClient.Connec
                    clase.put("disponibilidad", Val_Disponibilidad);
                    clase.put("nivel", Val_Drop2);
                    if(Definido.isChecked()){
-                       clase.put("lat", lastLocation.getLatitude()); //TODO
-                       clase.put("long", lastLocation.getLongitude()); //TODO
+                       try {
+                           clase.put("lat", lastLocation.getLatitude()); //TODO
+                           clase.put("long", lastLocation.getLongitude()); //TODO
+                       } catch (NullPointerException e){
+                           try {
+                               wait(3000);
+                           } catch (InterruptedException e1) {
+                               e1.printStackTrace();
+                           }
+                           return createClaseJSON();
+                       }
                    }
                    else{
                        clase.put("lat", 0f); //TODO

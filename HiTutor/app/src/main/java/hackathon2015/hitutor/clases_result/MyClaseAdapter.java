@@ -10,32 +10,31 @@ import java.util.ArrayList;
 import hackathon2015.hitutor.Auxiliar;
 import hackathon2015.hitutor.R;
 
-public class ClaseAdapter extends RecyclerView.Adapter<ClaseViewHolder>{
+public class MyClaseAdapter extends RecyclerView.Adapter<MyClaseViewHolder>{
 
     private ArrayList<Clase> clases;
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ClaseAdapter(ArrayList<Clase> clases) {
+    public MyClaseAdapter(ArrayList<Clase> clases) {
         this.clases = clases;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public ClaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyClaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.clases_card, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_clases_card, parent, false);
         //set the view's size, margins, paddings and layout parameters.........
-        return new ClaseViewHolder(v);
+        return new MyClaseViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(ClaseViewHolder holder, int position) {
-
+    public void onBindViewHolder(MyClaseViewHolder holder, int position) {
+        // - get element from your dataset at this position
+        // - replace the contents of the view with that element
         holder.text.setText(clases.get(position).title);
-        holder.rate.setRating(clases.get(position).rate);
-        holder.price.setText("$ "+String.valueOf(clases.get(position).price));
         holder.materia.setText(Auxiliar.getNameByIdTema(clases.get(position).temaId));
-        holder.userName.setText(Auxiliar.getNamebyId(clases.get(position).userId));//clases.get(position).user);
+        holder.price.setText("$ "+ String.valueOf(clases.get(position).price));
 
     }
 

@@ -18,6 +18,7 @@ public class SignupActivity extends AppCompatActivity {
     private String mUserName;
     private String mUserPassword;
     private String mUserPasswordConfirmation;
+    private String about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class SignupActivity extends AppCompatActivity {
         mUserPassword = passField.getText().toString();
         EditText passConfField = (EditText)findViewById(R.id.pass_confirm);
         mUserPasswordConfirmation = passConfField.getText().toString();
+        EditText about = (EditText) findViewById(R.id.about);
+        this.about = about.getText().toString();
         Signup signup = new Signup(this, Connection.SIGNUP_URL,"Registrando...");
         JSONObject signupJson = createSigninJSON();
         signup.setJSON(signupJson);
@@ -48,6 +51,7 @@ public class SignupActivity extends AppCompatActivity {
             taskObj.put("name", mUserName);
             taskObj.put("password", mUserPassword);
             taskObj.put("password_confirmation", mUserPasswordConfirmation);
+            taskObj.put("about", about);
             holder.put("user", taskObj);
         } catch (JSONException e) {
             e.printStackTrace();

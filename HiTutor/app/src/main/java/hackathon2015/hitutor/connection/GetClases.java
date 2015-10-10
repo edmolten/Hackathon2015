@@ -45,11 +45,11 @@ public class GetClases extends GETJSONConnection {
     protected void executeFinalTask(JSONObject jsonResponse) {
         Toast.makeText(activity,jsonResponse.toString(),Toast.LENGTH_LONG).show();
         ((Buscar)activity).clases.clear();
-        ((Buscar)activity).clases.addAll(getListFromJSON(jsonResponse));
+        ((Buscar)activity).clases.addAll(GetClases.getListFromJSON(jsonResponse));
         ((Buscar)activity).mAdapter.notifyDataSetChanged();
     }
 
-    private ArrayList<Clase> getListFromJSON(JSONObject jsonResponse) {
+    public static ArrayList<Clase> getListFromJSON(JSONObject jsonResponse) {
         JSONArray array;
         ArrayList<Clase> clases = new ArrayList<>();
         try {

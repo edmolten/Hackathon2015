@@ -5,8 +5,13 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
+import hackathon2015.hitutor.clases_result.Clase;
+import hackathon2015.hitutor.connection.GetClasesById;
 import hackathon2015.hitutor.connection.GetTemas;
 import hackathon2015.hitutor.connection.GetUsers;
 import hackathon2015.hitutor.constantes.Connection;
@@ -71,5 +76,28 @@ public class Auxiliar {
             }
         }
         return "";
+    }
+
+    public static User getUserById(int id) {
+        for(User user: users){
+            if(user.id == id){
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public static void getClasesById(AppCompatActivity activity) {
+        GetClasesById getClases = new GetClasesById(activity);
+        int localUserId = Auxiliar.getLocalUserId(activity);
+        JSONObject idObj = new JSONObject();
+        try {
+            idObj.put("user_id",localUserId);
+            getClases.setJSON(idObj);
+            getClases.execute();
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
