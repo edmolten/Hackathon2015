@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-fa4e674a18b18ba5eddea761665b1012b1fe610c.jar" />
+    </item>
+    <item
+        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-20da17f077d76ef015d707566c864b0c4dc32446.jar" />
+    </item>
+
+</items>
