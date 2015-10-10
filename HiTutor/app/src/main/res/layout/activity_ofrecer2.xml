@@ -157,8 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Descripción:"
-                        android:id="@+id/Ofre_textView6"
-                        android:textSize="15dp" />
+                        android:id="@+id/Ofre_textView6" />
 
                     <EditText
                         android:layout_width="fill_parent"

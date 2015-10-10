@@ -14,7 +14,7 @@ public class Signup extends POSTJSONConnection {
 
     @Override
     protected void executeFinalTask(JSONObject jsonResponse) {
-        Toast.makeText(activity, jsonResponse.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity, jsonResponse.toString(), Toast.LENGTH_LONG).show();
         activity.setResult(Result.ok);
         activity.finish();
         return;

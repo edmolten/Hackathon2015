@@ -18,7 +18,7 @@ public class Login extends POSTJSONConnection {
 
     @Override
     protected void executeFinalTask(JSONObject jsonResponse) {
-        Toast.makeText(activity, jsonResponse.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity, jsonResponse.toString(), Toast.LENGTH_LONG).show();
         try {
             if (jsonResponse.getBoolean("success")) {
                 SharedPreferences sharedPref = activity.getSharedPreferences("hitutor", Context.MODE_PRIVATE);
@@ -31,7 +31,7 @@ public class Login extends POSTJSONConnection {
         } catch (JSONException e1) {
             e1.printStackTrace();
             activity.setResult(Result.fail);
-            Toast.makeText(activity, "No existe el usuario", Toast.LENGTH_LONG).show();
+           // Toast.makeText(activity, "No existe el usuario", Toast.LENGTH_LONG).show();
         }
         activity.finish();
     }

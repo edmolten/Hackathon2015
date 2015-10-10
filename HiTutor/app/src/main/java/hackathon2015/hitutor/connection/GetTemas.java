@@ -36,7 +36,7 @@ public class GetTemas extends  GETJSONConnection {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Toast.makeText(activity,temas.toString(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity,temas.toString(),Toast.LENGTH_LONG).show();
 
     }
 

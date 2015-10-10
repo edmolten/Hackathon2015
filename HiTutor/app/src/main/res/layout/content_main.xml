@@ -16,19 +16,16 @@ tools:context=".Main">
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="93dp"
-        android:textColor="#FFFFFF"
-        android:background="#00c6c6" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Publicar clase"
         android:id="@+id/Main_TextView_Publicar"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="139dp"
-        android:background="#00c6c6"
-        android:textColor="#FFFFFF"
-        android:theme="@style/Base.Widget.AppCompat.Button.Borderless" />
+        android:theme="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 

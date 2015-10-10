@@ -15,9 +15,10 @@
             </string-array>
     <string-array name="nivel">
             <item>Nivel</item>
-            <item>Básica</item>
-            <item>Secundaria</item>
-            <item>Universitaria</item>
+            <item>Basica</item>
+            <item>Media</item>
+            <item>Superior</item>
+            <item>Postgrado</item>
             </string-array>
     <string name="title_activity_welcome">WelcomeActivity</string>
 

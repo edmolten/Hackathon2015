@@ -43,7 +43,7 @@ public class GetClases extends GETJSONConnection {
 
     @Override
     protected void executeFinalTask(JSONObject jsonResponse) {
-        Toast.makeText(activity,jsonResponse.toString(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity,jsonResponse.toString(),Toast.LENGTH_LONG).show();
         ((Buscar)activity).clases.clear();
         ((Buscar)activity).clases.addAll(GetClases.getListFromJSON(jsonResponse));
         ((Buscar)activity).mAdapter.notifyDataSetChanged();

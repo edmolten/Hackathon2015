@@ -68,6 +68,11 @@
                 android:layout_alignEnd="@+id/pass"
                 android:hint="Repite contraseña"
                 android:inputType="textPassword" />
+            <EditText
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/about"
+                android:hint="Acerca de ti" />
         </LinearLayout>
     </LinearLayout>
 

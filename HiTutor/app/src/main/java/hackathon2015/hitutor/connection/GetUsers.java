@@ -51,6 +51,6 @@ public class GetUsers extends GETJSONConnection {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Toast.makeText(activity, users.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity, users.toString(), Toast.LENGTH_LONG).show();
     }
 }
