@@ -2,18 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jar="C:\Users\eddox\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-9ff63c0461f71988b8ffcf727655dcc814cd1c18.jar" />
+    </item>
+    <item
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-0d70fd092a48200fe186c73fa4bad798de9e4492.jar" />
+    </item>
+    <item
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-eb28743047a76aadc169ae60fdb4362c85a2be74.jar" />
+    </item>
+    <item
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-fa4e674a18b18ba5eddea761665b1012b1fe610c.jar" />
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-5a2c4297c571584035a977a9856afe9a9cdd14f7.jar" />
     </item>
     <item
-        jar="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="C:\Users\pc-1\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-20da17f077d76ef015d707566c864b0c4dc32446.jar" />
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-f99b765a04ff2f39a8d4e5098b79132182e2fcb6.jar" />
+    </item>
+    <item
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\classes-b4b55370fa91730b5d5e55c70b5792a9d7ca3b0e.jar" />
+    </item>
+    <item
+        jar="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\eddox\Documents\GitHub\Hackathon2015\HiTutor\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-45002cb4cbffbe08012e951174e35220d9251108.jar" />
     </item>
 
 </items>

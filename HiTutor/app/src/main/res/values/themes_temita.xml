@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="TEMITA" parent="@style/_TEMITA"/>
+
+  <style name="_TEMITA" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <item name="android:editTextBackground">@drawable/temita_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#9997d0e5</item>
+    <item name="android:textSelectHandleLeft">@drawable/temita_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/temita_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/temita_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewTEMITA</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/temita_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/temita_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonTEMITA</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonTEMITA</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerTEMITA</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarTEMITA</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarTEMITA</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarTEMITA</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigTEMITA</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallTEMITA</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleTEMITA</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/temita_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/temita_activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/temita_fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>

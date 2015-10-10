@@ -11,10 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,9 +33,8 @@ public class Buscar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,26 +43,20 @@ public class Buscar extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Spinner spinner = (Spinner) findViewById(R.id.buscar_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.temas, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinner.setAdapter(adapter);
 
-        // SPINER
-    Spinner buscar_spinner = (Spinner) findViewById(R.id.buscar_spinner); // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-            R.array.temas,android.R.layout.simple_spinner_item); // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);// Apply the adapter to the spinner
-        buscar_spinner.setAdapter(adapter);
-
-    Spinner buscar_spinner1 = (Spinner) findViewById(R.id.buscar_spinner1);// Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-                R.array.nivel, android.R.layout.simple_spinner_item);// Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);// Apply the adapter to the spinner
+        Spinner buscar_spinner1 = (Spinner) findViewById(R.id.buscar_spinner1);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.nivel, android.R.layout.simple_spinner_item);// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         buscar_spinner1.setAdapter(adapter1);
 
-      buscar_sort = (Spinner) findViewById(R.id.buscar_sort);// Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> buscar_adapter = ArrayAdapter.createFromResource(this,
-                R.array.sort, android.R.layout.simple_spinner_item);// Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);// Apply the adapter to the spinner
+        buscar_sort = (Spinner) findViewById(R.id.buscar_sort);
+        ArrayAdapter<CharSequence> buscar_adapter = ArrayAdapter.createFromResource(this, R.array.sort, android.R.layout.simple_spinner_item);// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         buscar_sort.setAdapter(buscar_adapter);
 
         clases = new ArrayList<>();
