@@ -47,7 +47,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 switch (resultCode) {
                     case Result.ok:
                         Snackbar.make(v,"Login correcto",Snackbar.LENGTH_LONG).show();
-                        finishActivity(Request.session_nedded);
+                        finish();
                         break;
                     case Result.fail:
                         Snackbar.make(v,"Error al ingresar. Intentelo nuevamente",Snackbar.LENGTH_LONG).show();
@@ -70,7 +70,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finishActivity(Request.block_back);
+        finish();
 
     }
 

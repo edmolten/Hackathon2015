@@ -49,7 +49,7 @@ public class Main extends AppCompatActivity
             case Request.session_nedded:
                 break;
             case Request.block_back:
-                Log.e("asd","entro");
+                Log.e("Main.onActivityResult","you shall not pass!");
                 finish();
         }
     }
