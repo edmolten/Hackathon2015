@@ -19,5 +19,6 @@
             <item>Secundaria</item>
             <item>Universitaria</item>
             </string-array>
+    <string name="title_activity_welcome">WelcomeActivity</string>
 
 </resources>

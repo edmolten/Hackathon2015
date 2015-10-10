@@ -27,6 +27,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
         </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:label="Registrar" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Ingresar" >
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

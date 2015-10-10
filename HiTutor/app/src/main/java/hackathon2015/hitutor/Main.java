@@ -11,12 +11,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import hackathon2015.hitutor.connection.Login;
+
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(!isLoggedIn()) {
+            Intent myIntent = new Intent(this, WelcomeActivity.class);
+            startActivityForResult(myIntent, 37);
+        }
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -36,6 +42,11 @@ public class Main extends AppCompatActivity
 
 
     }
+
+    private boolean isLoggedIn() {
+        return false;
+    }
+
 
     @Override
     public void onBackPressed() {
