@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import org.json.JSONException;
@@ -79,15 +80,40 @@ public class Ofrecer extends AppCompatActivity {
     public String Val_Disponibilidad;
     public String Val_Contacto;
 
+    //relative layout y botones
+    public RelativeLayout ReLayout;
+    public Button ButtonUbicacionActual;
+    public Button ButtonBuscarUbicacion;
+
     //Listener para el checkbox
     public void addListenerOnCheckBox(){
         Definido = (CheckBox)findViewById(R.id.Ofre_checkBox2);
+        ReLayout = (RelativeLayout)findViewById(R.id.Ofrecer_RelativeLayout1);
 
         Definido.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                //AQUI AGREGAR LA FUNCIONALIDAD DEL MAPA Y VOLAS
-                //HAY QUE MANEJAR LA LAYOUT RELATIVA "INVISIBLE" PARA QUE SE EXPANDA Y MUESTRE LA UBICACION EN UN MAPA
+                //TODO AQUI AGREGAR LA FUNCIONALIDAD DEL MAPA Y VOLAS
+                //TODO HAY QUE MANEJAR LA LAYOUT RELATIVA "INVISIBLE" PARA QUE SE EXPANDA Y MUESTRE LA UBICACION EN UN MAPA
+                if (isChecked){
+                    ReLayout.setVisibility(View.VISIBLE); //hace a la layout visible
+                    //Listener del boton "ButtonUbicacionActual"
+                    ButtonUbicacionActual.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+                            //CLICK AL BOTON "ButtonUbicacionActual"
+                            //TODO ejecuta accion en mapa
+                        }
+                    });
+                    //Listener del boton "ButtonBuscarUbicacion"
+                    ButtonBuscarUbicacion.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+                            //CLICK AL BOTON "ButtonBuscarUbicacion"
+                            //TODO ejecuta accion en mapa
+                        }
+                    });
+                };
             }
         });
     }
@@ -136,7 +162,7 @@ public class Ofrecer extends AppCompatActivity {
                    clase.put("isDesignadoPorTutor", Val_Definido);
                    clase.put("price", Val_Precio);
                    clase.put("user_id", Auxiliar.getLocalUserId(Ofrecer.this));
-                   clase.put("tema_ir", Auxiliar.getIdTemaByName(Val_Drop1));
+                   clase.put("tema_id", Auxiliar.getIdTemaByName(Val_Drop1));
                    clase.put("description", Val_Descripcion);
                    clase.put("disponibilidad", Val_Disponibilidad);
                    clase.put("nivel", Val_Drop2);
