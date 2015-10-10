@@ -15,14 +15,14 @@ public class Auxiliar {
 
     public static void chargeTemas(AppCompatActivity activity){
         temas = new ArrayList<>();
-        GetTemas getTemas = new GetTemas(temas,activity, Connection.GET_TEMAS_URL);
+        GetTemas getTemas = new GetTemas(temas,activity, Connection.GET_TEMAS_URL,"Cargando...");
         getTemas.execute();
     }
 
     public static int getLocalUserId(AppCompatActivity activity){
         SharedPreferences sharedPref = activity.getSharedPreferences("hitutor", Context.MODE_PRIVATE);
-        String idString = sharedPref.getString("userId", "error");
-        if(idString.equalsIgnoreCase("error")){
+        String idString = sharedPref.getString("id", "error");
+        if(idString.equals("error")) {
             Log.e("ERROR", "ERROR FATAL, NO HAY USUARIO O EL ID ESTA MAL");
             activity.finish();
         }

@@ -1,6 +1,8 @@
 package hackathon2015.hitutor;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -40,7 +42,10 @@ public class Main extends AppCompatActivity
     }
 
     private boolean isLoggedIn() {
-        return false;
+        SharedPreferences sharedPref = getSharedPreferences("hitutor", Context.MODE_PRIVATE);
+        String idString = sharedPref.getString("id", "error");
+        return !idString.equals("error");
+
     }
 
     @Override

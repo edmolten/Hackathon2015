@@ -26,11 +26,10 @@
                 android:layout_height="wrap_content"
                 android:text="Título:"
                 android:id="@+id/Ofre_textView2"
-                android:layout_weight="0.69"
-                android:textSize="25dp" />
+                android:textSize="@dimen/abc_text_size_body_2_material" />
 
             <EditText
-                android:layout_width="231dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Ofre_editText"
                 android:layout_alignParentBottom="true"
@@ -54,10 +53,10 @@
                     android:layout_height="wrap_content"
                     android:text="Materia:"
                     android:id="@+id/Ofre_textView3"
-                    android:textSize="20dp" />
+                    android:textSize="@dimen/abc_text_size_body_2_material" />
 
                 <Spinner
-                    android:layout_width="114dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/Ofre_spinner3"
                     android:layout_weight="0.12" />
@@ -75,8 +74,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nivel:"
                     android:id="@+id/Ofre_textView4"
-                    android:layout_weight="0.55"
-                    android:textSize="20dp" />
+                    android:textSize="@dimen/abc_text_size_body_2_material" />
 
                 <Spinner
                     android:layout_width="133dp"
@@ -94,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:text="Precio/hora:"
                         android:id="@+id/Ofre_textView5"
-                        android:textSize="15dp" />
+                        android:textSize="@dimen/abc_text_size_body_2_material" />
 
                     <EditText
                         android:layout_width="79dp"
@@ -123,21 +121,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Modalidad:"
-                        android:id="@+id/Ofre_textView9" />
+                        android:id="@+id/Ofre_textView9"
+                        android:textSize="@dimen/abc_text_size_body_2_material" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="A domicilio"
                         android:id="@+id/Ofre_checkBox"
-                        android:layout_weight="0.30" />
+                        android:layout_weight="0.30"
+                        android:textSize="@dimen/abc_text_size_body_2_material" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Definido por mi"
                         android:id="@+id/Ofre_checkBox2"
-                        android:layout_weight="0.36" />
+                        android:layout_weight="0.36"
+                        android:textSize="@dimen/abc_text_size_body_2_material" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -148,7 +149,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="wrap_content"
                     android:weightSum="1">
 
                     <TextView
@@ -156,10 +157,10 @@
                         android:layout_height="wrap_content"
                         android:text="Descripción:"
                         android:id="@+id/Ofre_textView6"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/Ofre_editText3"
                         android:layout_weight="0.79" />
@@ -168,7 +169,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="82dp"
+                    android:layout_height="wrap_content"
                     android:weightSum="1">
 
                     <TextView
@@ -178,16 +179,15 @@
                         android:id="@+id/Ofre_textView7" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Ofre_editText4"
-                        android:layout_weight="0.91" />
+                        android:id="@+id/Ofre_editText4" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="78dp"
+                    android:layout_height="wrap_content"
                     android:weightSum="1">
 
                     <TextView
@@ -197,16 +197,15 @@
                         android:id="@+id/Ofre_textView8" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Ofre_editText5"
-                        android:layout_weight="0.90" />
+                        android:id="@+id/Ofre_editText5" />
                 </LinearLayout>
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_publicar"
+                    android:text="Publicar"
                     android:id="@+id/Ofre_button_Publicar"
                     android:layout_gravity="center_horizontal" />
 

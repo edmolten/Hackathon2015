@@ -1,21 +1,20 @@
 package hackathon2015.hitutor.connection;
 
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
-import hackathon2015.hitutor.Auxiliar;
 
 public class PostClase extends POSTJSONConnection {
-    private int userId;
+
     public PostClase(AppCompatActivity activity, String urlString, String loadingMessage) {
         super(activity, urlString, loadingMessage);
-        userId = Auxiliar.getLocalUserId(activity);
-
     }
 
     @Override
     protected void executeFinalTask(JSONObject jsonResponse) {
+        Toast.makeText(activity,jsonResponse.toString(),Toast.LENGTH_LONG).show();
         activity.finish();
     }
 }

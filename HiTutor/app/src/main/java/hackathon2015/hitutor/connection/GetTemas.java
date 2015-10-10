@@ -14,8 +14,8 @@ import hackathon2015.hitutor.Tema;
 
 public class GetTemas extends  GETJSONConnection {
     ArrayList<Tema> temas;
-    public GetTemas(ArrayList<Tema> temas, AppCompatActivity activity, String urlString) {
-        super(activity, urlString);
+    public GetTemas(ArrayList<Tema> temas, AppCompatActivity activity, String urlString,String message) {
+        super(activity, urlString, message);
         this.temas = temas;
     }
 

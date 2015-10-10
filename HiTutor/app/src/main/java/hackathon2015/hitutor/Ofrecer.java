@@ -2,18 +2,18 @@ package hackathon2015.hitutor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 import hackathon2015.hitutor.connection.PostClase;
 import hackathon2015.hitutor.constantes.Connection;
@@ -28,8 +28,11 @@ public class Ofrecer extends AppCompatActivity {
 
         //Ofre_spinner3 <-> Dropdown de Materias
         Spinner Ofre_spinner3 = (Spinner) findViewById(R.id.Ofre_spinner3);
-        ArrayAdapter<CharSequence> Ofre_adapter3 = ArrayAdapter.createFromResource(this,
-                R.array.temas, android.R.layout.simple_spinner_item);
+        ArrayList<String> array = new ArrayList<>();
+        for(Tema tema : Auxiliar.temas){
+            array.add(tema.name);
+        }
+        ArrayAdapter<String> Ofre_adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, array);
         Ofre_adapter3.setDropDownViewResource(android.R.layout.simple_spinner_item);
         Ofre_spinner3.setAdapter(Ofre_adapter3);
 
@@ -118,10 +121,12 @@ public class Ofrecer extends AppCompatActivity {
                Val_Disponibilidad = Disponibilidad.getText().toString();
                Val_Contacto = Contacto.getText().toString();
                PostClase postClase = new PostClase(Ofrecer.this, Connection.POST_CLASE_URL, "Guardando clase...");
-               JSONObject claseJSON = createClaSEJSON();
+               JSONObject claseJSON = createClaseJSON();
+               postClase.setJSON(claseJSON);
+               postClase.execute();
            }
 
-           private JSONObject createClaSEJSON() {
+           private JSONObject createClaseJSON() {
                JSONObject holder = new JSONObject();
                JSONObject clase = new JSONObject();
                try {
@@ -138,6 +143,7 @@ public class Ofrecer extends AppCompatActivity {
                    clase.put("lat", 0); //TODO
                    clase.put("long", 0); //TODO
                    clase.put("activa", true);
+                   clase.put("contacto", Val_Contacto);
                    holder.put("clase", clase);
 
                } catch (JSONException e) {
