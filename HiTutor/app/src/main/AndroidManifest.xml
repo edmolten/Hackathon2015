@@ -27,6 +27,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
         </activity>
+        <activity android:name=".Ofrecer" >
+        </activity>
     </application>
 
 </manifest>

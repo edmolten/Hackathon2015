@@ -80,6 +80,7 @@ public class Main extends AppCompatActivity
 
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(Main.this, Ofrecer.class));
 
         } else if (id == R.id.nav_slideshow) {
 
