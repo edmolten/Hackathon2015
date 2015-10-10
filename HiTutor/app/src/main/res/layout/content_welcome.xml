@@ -9,13 +9,14 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_welcome" tools:context="hackathon2015.hitutor.WelcomeActivity"
-    android:gravity="center_vertical|center_horizontal">
+    android:gravity="center_vertical|center_horizontal"
+    android:weightSum="1">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="124dp"
         android:id="@+id/imageView2"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_hitutor_logo" />
 
     <TextView
         android:layout_width="wrap_content"
