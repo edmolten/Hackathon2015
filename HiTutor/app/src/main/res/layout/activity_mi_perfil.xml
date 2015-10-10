@@ -7,4 +7,124 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="hackathon2015.hitutor.MiPerfil">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi perfil"
+        android:id="@+id/Perfil_TextView_Titulo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:id="@+id/Perfil_TextViewNombre"
+        android:layout_below="@+id/Perfil_TextView_Titulo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad:"
+        android:id="@+id/Perfil_TextViewEdad"
+        android:textSize="20dp"
+        android:layout_below="@+id/Perfil_TextViewNombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail:"
+        android:id="@+id/Perfil_TextViewMail"
+        android:textSize="20dp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/Perfil_TextViewEdad"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_ImageViewProfile"
+        android:src="@mipmap/profile_picture"
+        android:layout_below="@+id/Perfil_TextViewMail"
+        android:layout_alignRight="@+id/Perfil_TextViewEdad"
+        android:layout_alignEnd="@+id/Perfil_TextViewEdad"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acerca de mi:"
+        android:id="@+id/Perfil_TextViewAboutMe"
+        android:textSize="20dp"
+        android:layout_below="@+id/Perfil_TextViewMail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="103dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valoracion:"
+        android:id="@+id/Perfil_TextViewValoracion"
+        android:textSize="20dp"
+        android:layout_marginBottom="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_TextViewNombreDB"
+        android:layout_above="@+id/Perfil_TextViewEdad"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/Perfil_TextViewValoracion"
+        android:layout_toEndOf="@+id/Perfil_TextViewValoracion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_TextViewEdadDB"
+        android:layout_toRightOf="@+id/Perfil_TextViewEdad"
+        android:layout_above="@+id/Perfil_TextViewMail"
+        android:layout_toLeftOf="@+id/Perfil_TextView_Titulo"
+        android:layout_toStartOf="@+id/Perfil_TextView_Titulo"
+        android:layout_alignTop="@+id/Perfil_TextViewEdad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_TextViewMailDB"
+        android:layout_alignBottom="@+id/Perfil_TextViewMail"
+        android:layout_toRightOf="@+id/Perfil_TextViewNombre"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_TextViewAboutMeDB"
+        android:layout_alignTop="@+id/Perfil_TextViewAboutMe"
+        android:layout_toRightOf="@+id/Perfil_TextViewEdadDB"
+        android:layout_above="@+id/Perfil_TextViewValoracion"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Perfil_RatingBarDB"
+        android:layout_below="@+id/Perfil_TextViewAboutMeDB"
+        android:layout_alignLeft="@+id/Perfil_TextViewAboutMeDB"
+        android:layout_alignStart="@+id/Perfil_TextViewAboutMeDB" />
 </RelativeLayout>
