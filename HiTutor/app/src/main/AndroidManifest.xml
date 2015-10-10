@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".buscar"
+            android:name=".Buscar"
             android:label="@string/title_activity_buscar"
             android:parentActivityName=".Main"
             android:theme="@style/AppTheme.NoActionBar" >
