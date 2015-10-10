@@ -1,13 +1,22 @@
 package hackathon2015.hitutor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 public class Detalle_Clase extends AppCompatActivity {
+
+    public static String s_titulo;
+    public static float s_rating;
+    public static String s_precio;
+    public static String s_user;
+    public static String s_materia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +36,18 @@ public class Detalle_Clase extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        TextView text = (TextView) findViewById(R.id.detail_title);
+        RatingBar rate = (RatingBar) findViewById(R.id.buscar_ratingBar);
+        TextView  userName = (TextView) findViewById(R.id.buscar_nombre);
+        TextView mater = (TextView) findViewById(R.id.buscar_materia);
+        TextView price = (TextView) findViewById(R.id.buscar_preciohora);
+
+
+        text.setText(s_titulo);
+        rate.setRating(s_rating);
+        price.setText(s_precio);
+        mater.setText(s_materia);
+        userName.setText(s_user);
 
 
     }

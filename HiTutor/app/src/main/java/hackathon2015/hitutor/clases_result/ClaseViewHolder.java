@@ -32,8 +32,20 @@ public class ClaseViewHolder extends RecyclerView.ViewHolder {
 
         v.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                v.getContext().startActivity(new Intent(v.getContext(),Detalle_Clase.class));
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Detalle_Clase.class);
+                Detalle_Clase.s_titulo = text.getText().toString();
+                //intent.putExtra("titulo",text.getText().toString()); //titulo
+                Detalle_Clase.s_rating = rate.getRating();
+                //intent.putExtra("rating",rate.getRating());
+                Detalle_Clase.s_precio = price.getText().toString();
+                //intent.putExtra("precio",price.getText().toString());
+                Detalle_Clase.s_user = userName.getText().toString();
+                //intent.putExtra("username",userName.getText().toString());
+                Detalle_Clase.s_materia = materia.getText().toString();
+                //intent.putExtra("materia", userName.getText().toString());
+                v.getContext().startActivity(intent);
+
             }
         });
 

@@ -5,7 +5,7 @@ public class Clase {
 
     private int userId;
     private int price;
-    private int rate;
+    private float rate;
     private String materia;
     private String userName;
     private String title;
@@ -33,7 +33,7 @@ public class Clase {
     }
     public int getPrice() {
         return price;
-    } public int getRate() {
+    } public float getRate() {
         return rate;
     }
 }
