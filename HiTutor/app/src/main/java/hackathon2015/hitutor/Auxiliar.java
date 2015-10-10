@@ -29,4 +29,12 @@ public class Auxiliar {
         return Integer.valueOf(idString);
     }
 
+    public static int getIdTemaByName(String nombre) {
+        for(Tema tema: temas){
+            if(tema.name.equals(nombre)){
+                return tema.id;
+            }
+        }
+        return 0;
+    }
 }

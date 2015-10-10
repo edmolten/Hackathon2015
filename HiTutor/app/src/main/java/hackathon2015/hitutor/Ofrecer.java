@@ -131,7 +131,15 @@ public class Ofrecer extends AppCompatActivity {
                    clase.put("isDesignadoPorTutor", Val_Definido);
                    clase.put("price", Val_Precio);
                    clase.put("user_id", Auxiliar.getLocalUserId(Ofrecer.this));
+                   clase.put("tema_ir", Auxiliar.getIdTemaByName(Val_Drop1));
+                   clase.put("description", Val_Descripcion);
+                   clase.put("disponibilidad", Val_Disponibilidad);
+                   clase.put("nivel", Val_Drop2);
+                   clase.put("lat", 0); //TODO
+                   clase.put("long", 0); //TODO
+                   clase.put("activa", true);
                    holder.put("clase", clase);
+
                } catch (JSONException e) {
                    e.printStackTrace();
                    return null;
