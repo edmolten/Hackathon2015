@@ -14,8 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buscar_spinner"
-        android:spinnerMode="dropdown"
-        />
+        android:spinnerMode="dropdown"/>
 
     <Spinner
         android:layout_width="fill_parent"

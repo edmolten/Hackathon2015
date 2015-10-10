@@ -25,7 +25,7 @@
             android:name=".Buscar"
             android:label="@string/title_activity_buscar"
             android:parentActivityName=".Main"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/Theme.Holo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
@@ -46,7 +46,11 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
-        <activity android:name=".Ofrecer" >
+        <activity android:name=".Ofrecer"
+            android:theme="@style/Theme.Holo">
+        </activity>
+
+        <activity android:name=".MiPerfil" >
         </activity>
 
         <activity
