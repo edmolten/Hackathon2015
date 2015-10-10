@@ -23,7 +23,7 @@
         android:layout_alignStart="@+id/email"
         android:layout_alignRight="@+id/email"
         android:layout_alignEnd="@+id/email"
-        android:hint="Nick" />
+        android:hint="Nombre completo" />
 
     <EditText
         android:layout_width="272dp"
@@ -52,7 +52,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="registrar"
+        android:text="Registrar"
         android:id="@+id/registrar"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/pass_confirm"
