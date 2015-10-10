@@ -100,7 +100,9 @@
                         android:ems="10"
                         android:text="1000"
                         android:id="@+id/Ofre_editText2"
-                        android:digits="True" />
+                        android:digits="True"
+                        android:enabled="true"
+                        android:editable="true" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -5,7 +5,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_
 android:id="@+id/content_frame"
 android:layout_height="match_parent"
 app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/app_bar_main"
-tools:context=".Main">
+tools:context=".Main"
+    android:background="#B8CFD6">
 
 <!-- Add content here -->
     <TextView
@@ -16,7 +17,8 @@ tools:context=".Main">
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="93dp"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,6 +28,7 @@ tools:context=".Main">
         android:theme="@style/Base.Widget.AppCompat.Button.Borderless"
         android:textSize="20dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF" />
 </RelativeLayout>
 
