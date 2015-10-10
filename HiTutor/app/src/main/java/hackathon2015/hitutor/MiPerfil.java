@@ -1,9 +1,7 @@
 package hackathon2015.hitutor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.RatingBar;
-import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
 
 public class MiPerfil extends AppCompatActivity {
 

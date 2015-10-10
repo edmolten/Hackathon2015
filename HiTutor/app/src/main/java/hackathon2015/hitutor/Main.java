@@ -20,10 +20,17 @@ import hackathon2015.hitutor.constantes.Request;
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private boolean firstTime = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Auxiliar.chargeTemas(this);
+        if(firstTime){
+            Auxiliar.chargeTemas(this);
+            Auxiliar.chargeUsers(this);
+            firstTime = false;
+        }
+
         if(!isLoggedIn()) {
             Intent myIntent = new Intent(this, WelcomeActivity.class);
             startActivityForResult(myIntent, Request.session_nedded);
@@ -55,7 +62,6 @@ public class Main extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         switch (requestCode) {
             case Request.session_nedded:
-
                 break;
             case Request.block_back:
                 Log.e("Main.onActivityResult", "you shall not pass!");

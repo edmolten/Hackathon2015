@@ -37,7 +37,8 @@
         android:id="@+id/button"
         android:layout_marginRight="33dp"
         android:layout_marginEnd="33dp"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:onClick="onBuscarButtonClick"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listaclases"

@@ -3,15 +3,18 @@ package hackathon2015.hitutor.connection;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public abstract class GETJSONConnection extends JSONConnection {
@@ -28,6 +31,12 @@ public abstract class GETJSONConnection extends JSONConnection {
     @Override
     protected JSONObject doInBackground(String... params) {
         client = new DefaultHttpClient();
+        List<? extends NameValuePair> listParams = setParams(json);
+        if(listParams != null){
+            String paramString = URLEncodedUtils.format(listParams, "utf-8");
+            urlString += "?";
+            urlString += paramString;
+        }
         HttpGet get = new HttpGet(urlString);
         JSONObject jsonResponse = new JSONObject();
         try {
@@ -48,4 +57,6 @@ public abstract class GETJSONConnection extends JSONConnection {
         }
         return jsonResponse;
     }
+
+    protected abstract List<? extends NameValuePair> setParams(JSONObject json);
 }

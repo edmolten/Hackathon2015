@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import hackathon2015.hitutor.Auxiliar;
 import hackathon2015.hitutor.R;
 
 public class ClaseAdapter extends RecyclerView.Adapter<ClaseViewHolder>{
@@ -31,11 +32,11 @@ public class ClaseAdapter extends RecyclerView.Adapter<ClaseViewHolder>{
     public void onBindViewHolder(ClaseViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.text.setText(clases.get(position).getTitle());
-        holder.rate.setRating(clases.get(position).getRate());
-        holder.price.setText(String.valueOf(clases.get(position).getPrice()));
-        holder.materia.setText(clases.get(position).getMateria());
-        holder.userName.setText(clases.get(position).getuserName());
+        holder.text.setText(clases.get(position).title);
+        holder.rate.setRating(clases.get(position).rate);
+        holder.price.setText(String.valueOf(clases.get(position).price));
+        holder.materia.setText(Auxiliar.getNameByIdTema(clases.get(position).temaId));
+        holder.userName.setText("------");//clases.get(position).user);
 
     }
 
