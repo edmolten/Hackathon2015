@@ -25,5 +25,10 @@
         <item>Prof2</item>
         <item>Prof3</item>
     </string-array>
+ <string-array name="sort">
+        <item>Precio</item>
+        <item>Rating</item>
+
+    </string-array>
 
 </resources>
