@@ -1,6 +1,5 @@
 package hackathon2015.hitutor;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -42,16 +41,11 @@ public class Detalle_Clase extends AppCompatActivity {
         TextView  userName = (TextView) findViewById(R.id.detail_nombre);
         TextView mater = (TextView) findViewById(R.id.detail_materia);
         TextView price = (TextView) findViewById(R.id.detail_price);
-
-
         text.setText(s_titulo);
-        level.setText(s_level);
         rate.setRating(s_rating);
         price.setText(s_precio);
         mater.setText(s_materia);
         userName.setText(s_user);
-        //FALTAN LOS DATOS DE CONTACTO
-
     }
 
 }

@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Precio/hora"
-                android:id="@+id/detail_level"
+                android:id="@+id/detail_price"
                 android:digits="True" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Nivel"
-                android:id="@+id/clase_nivel" />
+                android:id="@+id/detail_level" />
 
             <TextView
                 android:layout_width="match_parent"

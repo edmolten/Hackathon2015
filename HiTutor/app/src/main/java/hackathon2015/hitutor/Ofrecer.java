@@ -135,7 +135,7 @@ public class Ofrecer extends AppCompatActivity implements GoogleApiClient.Connec
                Val_Titulo = Titulo.getText().toString();
                Val_Drop1 = Drop1.getSelectedItem().toString();
                Val_Drop2 = Drop2.getSelectedItem().toString();
-               Val_Precio = Integer.valueOf(Precio.getText().toString());
+               Val_Precio = Integer.valueOf(Precio.getText().toString());//TODO benjamin no tiene criterio
                Val_ADomicilio = ADomicilio.isChecked();
                Val_Definido = Definido.isChecked();
                Val_Descripcion = Descripcion.getText().toString();
