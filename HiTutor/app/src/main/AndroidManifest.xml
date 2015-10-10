@@ -30,6 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
         </activity>
+
         <activity
             android:name=".SignupActivity"
             android:label="Registrar" >
@@ -42,6 +43,8 @@
             android:name=".WelcomeActivity"
             android:label="Iniciar sesión"
             android:theme="@style/AppTheme.NoActionBar" >
+
+        <activity android:name=".Ofrecer" >
         </activity>
     </application>
 

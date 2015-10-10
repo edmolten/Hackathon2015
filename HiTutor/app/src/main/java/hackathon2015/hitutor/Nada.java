@@ -5,5 +5,5 @@ package hackathon2015.hitutor;
  */
 public class Nada {
 
-    
+
 }
