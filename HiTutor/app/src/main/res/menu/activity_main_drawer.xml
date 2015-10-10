@@ -4,12 +4,12 @@
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_menu_search"
             android:title="Buscar" />
-        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_edit"
+            android:title="Publicar" />
+        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Mi perfil" />
         <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Opciones" />
     </group>
 
     <item android:title="Communicate">

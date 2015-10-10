@@ -20,24 +20,25 @@ public class Clase {
     public String title;
 
     public Clase(int userId, int temaId, boolean isADomicilio,
-                 boolean isDesignadoPorTutor, String descripcion,String disponibilidad,
-                 int price, String userName,String title,
-                 String nivel, boolean activa, float lat, float lon, String contacto, float rate){
+                 boolean isDesignadoPorTutor, String descripcion, String disponibilidad,
+                 int price, String userName, String title,
+                 String nivel, boolean activa, float lat, float lon, String contacto, float rate) {
 
-            this.userId = userId;
-            this.userName = userName;
-            this.title = title;
-            this.price = price;
-            this.temaId = temaId;
-            this.isADomicilio = isADomicilio;
-            this.isDesignadoPorUsuario = isDesignadoPorTutor;
-            this.descripcion = descripcion;
-            this.disponibilidad = disponibilidad;
-            this.nivel = nivel;
-            this.rate = rate;
-            this.activa = activa;
-            this.lat = lat;
-            this.lon = lon;
-            this.contacto = contacto;
-        }
+        this.userId = userId;
+        this.userName = userName;
+        this.title = title;
+        this.price = price;
+        this.temaId = temaId;
+        this.isADomicilio = isADomicilio;
+        this.isDesignadoPorUsuario = isDesignadoPorTutor;
+        this.descripcion = descripcion;
+        this.disponibilidad = disponibilidad;
+        this.nivel = nivel;
+        this.rate = rate;
+        this.activa = activa;
+        this.lat = lat;
+        this.lon = lon;
+        this.contacto = contacto;
+    }
 }
+

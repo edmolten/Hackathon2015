@@ -42,6 +42,7 @@ public class Detalle_Clase extends AppCompatActivity {
         TextView mater = (TextView) findViewById(R.id.detail_materia);
         TextView price = (TextView) findViewById(R.id.detail_price);
         text.setText(s_titulo);
+
         rate.setRating(s_rating);
         price.setText(s_precio);
         mater.setText(s_materia);
