@@ -45,7 +45,7 @@ public class Detalle_Clase extends AppCompatActivity {
 
 
         text.setText(s_titulo);
-        level.setText(s_level);
+
         rate.setRating(s_rating);
         price.setText(s_precio);
         mater.setText(s_materia);

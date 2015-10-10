@@ -23,6 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Nuevo Usuario"
         android:id="@+id/nuevo_usuario"
+        android:clickable="true"
         android:gravity="center_vertical|center_horizontal"
         android:layout_marginTop="20dp"
         android:onClick="onNuevoUsuarioClick" />
@@ -35,6 +36,6 @@
         android:id="@+id/ingresar"
         android:gravity="center_vertical"
         android:layout_marginTop="20dp"
-        android:onClick="onIngresarClick" />
-
+        android:onClick="onIngresarClick"
+        android:clickable="true"/>
 </LinearLayout>

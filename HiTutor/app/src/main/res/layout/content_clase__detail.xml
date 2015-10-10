@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Precio/hora"
-                android:id="@+id/detail_level"
+                android:id="@+id/detail_price"
                 android:digits="True" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Nivel"
-                android:id="@+id/clase_nivel" />
+                android:id="@+id/detail_level" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -62,32 +62,25 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="362dp"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="90dp"
-            android:layout_height="113dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="180dp"
+                android:layout_height="204dp"
                 android:id="@+id/imageView2"
                 android:src="@mipmap/ic_default_profile_img" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="89dp">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="294dp"
             android:layout_height="98dp">
 
             <LinearLayout
@@ -96,7 +89,7 @@
                 android:layout_height="40dp">
 
                 <RatingBar
-                    android:layout_width="205dp"
+                    android:layout_width="298dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/detail_rating"
                     android:numStars="5" />
