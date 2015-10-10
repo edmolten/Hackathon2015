@@ -56,10 +56,9 @@
                     android:textSize="@dimen/abc_text_size_body_2_material" />
 
                 <Spinner
-                    android:layout_width="fill_parent"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/Ofre_spinner3"
-                    android:layout_weight="0.12" />
+                    android:id="@+id/Ofre_spinner3" />
 
             </LinearLayout>
 
@@ -78,7 +77,7 @@
 
                 <Spinner
                     android:layout_width="133dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:id="@+id/Ofre_spinner4"
                      />
 
@@ -109,7 +108,7 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="238dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
