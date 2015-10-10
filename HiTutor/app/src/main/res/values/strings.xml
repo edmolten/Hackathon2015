@@ -30,5 +30,6 @@
         <item>Rating</item>
 
     </string-array>
+    <string name="title_activity_clase__detail">clase_Detail</string>
 
 </resources>

@@ -27,6 +27,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hackathon2015.hitutor.Main" />
         </activity>
+        <activity
+            android:name=".Detalle_Clase"
+            android:label="@string/title_activity_clase__detail"
+            android:parentActivityName=".Main"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hackathon2015.hitutor.Main" />
+        </activity>
     </application>
 
 </manifest>

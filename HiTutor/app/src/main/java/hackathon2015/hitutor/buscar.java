@@ -92,6 +92,7 @@ public class Buscar extends AppCompatActivity {
         mAdapter = new ClaseAdapter(clases);
         mRecyclerView.setAdapter(mAdapter);
         buscar_sort.setOnItemSelectedListener(new MyOnItemSelectedListener());
+
     }
     public class MyOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
