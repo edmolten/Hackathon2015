@@ -7,15 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Collections;
-
 import hackathon2015.hitutor.clases_result.Clase;
 import hackathon2015.hitutor.clases_result.ClaseAdapter;
 import hackathon2015.hitutor.connection.GetClases;
@@ -27,7 +23,7 @@ import static hackathon2015.hitutor.ClaseComparator.getComparator;
 
 public class Buscar extends AppCompatActivity {
     public RecyclerView.Adapter mAdapter;
-    private EditText commentBox;
+
     public ArrayList<Clase> clases;
     Spinner spinner_materia;
     Spinner spinner_nivel;

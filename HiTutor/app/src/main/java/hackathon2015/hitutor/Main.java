@@ -141,8 +141,6 @@ public class Main extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             startActivity(new Intent(Main.this, MiPerfil.class));
 
-        } else if (id == R.id.nav_manage) {
-
         }
 
 
