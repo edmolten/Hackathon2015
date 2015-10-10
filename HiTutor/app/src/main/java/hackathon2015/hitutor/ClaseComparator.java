@@ -13,8 +13,8 @@ public enum ClaseComparator implements Comparator<Clase> {
     RATE_SORT {
         public int compare(Clase o1, Clase o2) {
             return Float.valueOf(o1.rate).compareTo(o2.rate);
-        }};
-
+        }
+    };
     public static Comparator<Clase> decending(final Comparator<Clase> other) {
         return new Comparator<Clase>() {
             public int compare(Clase o1, Clase o2) {
