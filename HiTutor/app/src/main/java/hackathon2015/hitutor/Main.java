@@ -1,17 +1,21 @@
 package hackathon2015.hitutor;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import hackathon2015.hitutor.constantes.Request;
+
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -19,19 +23,13 @@ public class Main extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(!isLoggedIn()) {
+            Intent myIntent = new Intent(this, WelcomeActivity.class);
+            startActivityForResult(myIntent, Request.session_nedded);
+        }
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -40,6 +38,28 @@ public class Main extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+    }
+
+    private boolean isLoggedIn() {
+        SharedPreferences sharedPref = getSharedPreferences("hitutor", Context.MODE_PRIVATE);
+        String idString = sharedPref.getString("id", "error");
+        return !idString.equals("error");
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        switch (requestCode) {
+            case Request.session_nedded:
+                Auxiliar.chargeTemas(this);
+                break;
+            case Request.block_back:
+                Log.e("Main.onActivityResult", "you shall not pass!");
+                finish();
+        }
     }
 
     @Override
@@ -81,8 +101,11 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camara) {
+            startActivity(new Intent(Main.this, Buscar.class));
+
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(Main.this, Ofrecer.class));
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -98,4 +121,5 @@ public class Main extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

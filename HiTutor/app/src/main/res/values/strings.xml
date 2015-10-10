@@ -5,4 +5,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_buscar">buscar</string>
+    <string name="button_publicar">Publicar</string>
+
+        <string-array name="temas">
+            <item>Temas</item>
+            <item>Matemáticas</item>
+            <item>Física</item>
+            </string-array>
+    <string-array name="nivel">
+            <item>Nivel</item>
+            <item>Básica</item>
+            <item>Secundaria</item>
+            <item>Universitaria</item>
+            </string-array>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+
 </resources>
