@@ -8,7 +8,24 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layo
 tools:context=".Main">
 
 <!-- Add content here -->
-<TextView android:text="Hello World!" android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar clase"
+        android:id="@+id/Main_TextView_Buscar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:textSize="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicar clase"
+        android:id="@+id/Main_TextView_Publicar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        android:textSize="35dp" />
 </RelativeLayout>
 

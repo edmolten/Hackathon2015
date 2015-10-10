@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import hackathon2015.hitutor.constantes.Request;
 
@@ -21,6 +23,10 @@ public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private boolean firstTime = true;
+
+    //declarar TextViews
+    public TextView BuscarText;
+    public TextView PublicarText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,24 @@ public class Main extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //atrapamos botones "Buscar"
+        BuscarText = (TextView)findViewById(R.id.Main_TextView_Buscar);
+        PublicarText = (TextView)findViewById(R.id.Main_TextView_Publicar);
+
+        //Listener para boton "Buscar"
+        BuscarText.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(Main.this, Buscar.class));
+            }
+        });
+        //Listener para boton "Publicar"
+        PublicarText.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(Main.this, Ofrecer.class));
+            }
+        });
     }
 
     private boolean isLoggedIn() {
